@@ -26,7 +26,7 @@ gulp.task('seo', function() {
 
         }
     }))
-    .gulp.dest('views');
+    .pipe(gulp.dest('./views'));
 });
 ```
 

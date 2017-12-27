@@ -1,6 +1,6 @@
 {
   "name": "gulp-seo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Adds social meta tags to your websites",
   "main": "index.js",
   "scripts": {
