@@ -1,6 +1,6 @@
 {
   "name": "gulp-seo",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Adds social meta tags to your websites",
   "main": "index.js",
   "scripts": {
@@ -26,6 +26,7 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "gulp-pug": "^3.3.0",
+    "gulp-sitemap": "^4.3.0",
     "gulp-util": "^3.0.8",
     "object-assign": "^4.1.1",
     "through2": "^2.0.3"
