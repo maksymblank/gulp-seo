@@ -19,15 +19,48 @@ gulp.task('seo', function() {
                 index: false, // true
                 follow: true // true
             },
-            revisitAfter: '5 month', // 3 month
+            revisitAfter: '5 month', // 5 month
             image: 'http://mywebsite.com/image.jpg',
             site_name: 'My Website',
-            type: 'website'
+            type: 'website',
+            url: 'http://mywebsite.com/'
 
         }
     }))
     .pipe(gulp.dest('./views'));
 });
+```
+## Output
+```html
+<title>Title website</title>
+<meta name="description" content="Description website">
+<meta name="author" content="Maksym Blank">
+<meta name="keywords" content="website', 'with', 'meta', 'tags">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="5 month">
+<meta name="image" content="http://mywebsite.com/image.jpg">
+
+<!-- Open Graph Meta tags -->
+<meta property="og:title" content="Title website">
+<meta property="og:description" content="Description website">
+<meta property="og:url" content="http://mywebsite.com/">
+<meta property="og:image" content="http://mywebsite.com/image.jpg">
+<meta property="og:site_name" content="My Website">
+<meta property="og:type" content="website">
+
+<!-- google + Meta tags -->
+<meta itemprop="description" content="Description website">
+<meta itemprop="image" content="http://mywebsite.com/image.jpg">
+<meta itemprop="name" content="Title website">
+
+<!-- Twitter Meta tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Title website">
+<meta name="twitter:description" content="Description website">
+<meta name="twitter:image" content="http://mywebsite.com/image.jpg">
+<meta name="twitter:site" content="http://mywebsite.com/">
+
+
 ```
 
 ## API
