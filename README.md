@@ -79,7 +79,7 @@ Required: `false`
 
 Example: 
 ```html
-<meta name="og:site_name" content="Personal website">
+<meta property="og:site_name" content="Personal website">
 ```
 
 ### keywords
@@ -138,7 +138,7 @@ Required: `false`
 
 Example: 
 ```html
-<meta name="og:image" content="http://mywebsite.com/image.jpg">
+<meta property="og:image" content="http://mywebsite.com/image.jpg">
 ```
 
 ### url
@@ -149,7 +149,7 @@ Required: `false`
 
 Example: 
 ```html
-<meta name="og:url" content="http://mywebsite.com/">
+<meta property="og:url" content="http://mywebsite.com/">
 ```
 
 ### type
@@ -160,7 +160,7 @@ Required: `false`
 
 Example: 
 ```html
-<meta name="og:type" content="website">
+<meta property="og:type" content="website">
 ```
 
 ### contact
@@ -228,7 +228,7 @@ Required: `false`
 
 Example: 
 ```html
-<meta name="og:video" content="http://mywebsite.com/video">
+<meta property="og:video" content="http://mywebsite.com/video">
 ```
 
 ### locale
@@ -239,7 +239,7 @@ Required: `false`
 
 Example: 
 ```html
-<meta name="og:locale" content="en_Us">
+<meta property="og:locale" content="en_Us">
 ```
 
 ### audio
@@ -250,7 +250,7 @@ Required: `false`
 
 Example: 
 ```html
-<meta name="og:audio" content="http://mywebsite.com/audio">
+<meta property="og:audio" content="http://mywebsite.com/audio">
 ```
 
 ## Also See
