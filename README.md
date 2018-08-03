@@ -19,15 +19,48 @@ gulp.task('seo', function() {
                 index: false, // true
                 follow: true // true
             },
-            revisitAfter: '5 month', // 3 month
+            revisitAfter: '5 month', // 5 month
             image: 'http://mywebsite.com/image.jpg',
             site_name: 'My Website',
-            type: 'website'
+            type: 'website',
+            url: 'http://mywebsite.com/'
 
         }
     }))
     .pipe(gulp.dest('./views'));
 });
+```
+## Output
+```html
+<title>Title website</title>
+<meta name="description" content="Description website">
+<meta name="author" content="Maksym Blank">
+<meta name="keywords" content="website', 'with', 'meta', 'tags">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="5 month">
+<meta name="image" content="http://mywebsite.com/image.jpg">
+
+<!-- Open Graph Meta tags -->
+<meta property="og:title" content="Title website">
+<meta property="og:description" content="Description website">
+<meta property="og:url" content="http://mywebsite.com/">
+<meta property="og:image" content="http://mywebsite.com/image.jpg">
+<meta property="og:site_name" content="My Website">
+<meta property="og:type" content="website">
+
+<!-- google + Meta tags -->
+<meta itemprop="description" content="Description website">
+<meta itemprop="image" content="http://mywebsite.com/image.jpg">
+<meta itemprop="name" content="Title website">
+
+<!-- Twitter Meta tags -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Title website">
+<meta name="twitter:description" content="Description website">
+<meta name="twitter:image" content="http://mywebsite.com/image.jpg">
+<meta name="twitter:site" content="http://mywebsite.com/">
+
+
 ```
 
 ## API
@@ -79,7 +112,7 @@ Required: `false`
 
 Example: 
 ```html
-<meta name="og:site_name" content="Personal website">
+<meta property="og:site_name" content="Personal website">
 ```
 
 ### keywords
@@ -138,7 +171,7 @@ Required: `false`
 
 Example: 
 ```html
-<meta name="og:image" content="http://mywebsite.com/image.jpg">
+<meta property="og:image" content="http://mywebsite.com/image.jpg">
 ```
 
 ### url
@@ -149,7 +182,7 @@ Required: `false`
 
 Example: 
 ```html
-<meta name="og:url" content="http://mywebsite.com/">
+<meta property="og:url" content="http://mywebsite.com/">
 ```
 
 ### type
@@ -160,7 +193,7 @@ Required: `false`
 
 Example: 
 ```html
-<meta name="og:type" content="website">
+<meta property="og:type" content="website">
 ```
 
 ### contact
@@ -228,7 +261,7 @@ Required: `false`
 
 Example: 
 ```html
-<meta name="og:video" content="http://mywebsite.com/video">
+<meta property="og:video" content="http://mywebsite.com/video">
 ```
 
 ### locale
@@ -239,7 +272,7 @@ Required: `false`
 
 Example: 
 ```html
-<meta name="og:locale" content="en_Us">
+<meta property="og:locale" content="en_Us">
 ```
 
 ### audio
@@ -250,7 +283,7 @@ Required: `false`
 
 Example: 
 ```html
-<meta name="og:audio" content="http://mywebsite.com/audio">
+<meta property="og:audio" content="http://mywebsite.com/audio">
 ```
 
 ## Also See
