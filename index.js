@@ -67,7 +67,8 @@ function addSeo(contents, opts){
             for(var tag in opts.meta){
                 if(ogList.indexOf(tag) !== -1){
                     if(typeof opts.meta[tag] !== 'string') throw new Error(tag + ' should be string');
-                    addMeta($, 'og:' + tag, opts.meta[tag]);
+                    
+                    $('head').append('\t<meta property="' + 'og:' + tag + '" content="' + opts.meta[tag] + '">\n');
                 }
             }
         }
@@ -94,7 +95,7 @@ function addSeo(contents, opts){
 
         // Starts appending Twitter
         if(opts.list.indexOf('twitter') !== -1){
-            var twitterList = ['title', 'description'];
+            var twitterList = ['title', 'description', 'image', 'site'];
             $('head').append('\n\t<!-- Twitter Meta Tags -->\n\n');
 
             addMeta($, 'twitter:card', 'summary');
